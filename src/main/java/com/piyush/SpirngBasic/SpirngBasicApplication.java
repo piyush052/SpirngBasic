@@ -7,6 +7,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
+import org.springframework.web.bind.annotation.GetMapping;
 
 @SpringBootApplication
 public class SpirngBasicApplication implements CommandLineRunner {
@@ -23,5 +24,10 @@ public class SpirngBasicApplication implements CommandLineRunner {
 	@Override
 	public void run(String... args) throws Exception {
 		appContextAwareComponent.doSomethingRelatedToAppContext();
+	}
+
+	@GetMapping("/person")
+	public void persons(){
+
 	}
 }
